@@ -13,6 +13,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: fluidattacks/sca-action@v1.2.0
+      - uses: fluidattacks/sca-action@1.2.0
         with:
           scan_config_path: .github/sca-config.yaml
