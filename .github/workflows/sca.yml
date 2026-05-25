@@ -1,0 +1,18 @@
+name: Paso2 - SCA
+
+on:
+  push:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  sca:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: fluidattacks/sca-action@v1.2.0
+        with:
+          scan_config_path: .github/sca-config.yaml
